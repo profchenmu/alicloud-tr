@@ -1,9 +1,16 @@
 variable "region" {
-  default = "cn-qingdao"
+  default = "cn-hangzhou-b"
+}
+variable "access_key" {
+  type = string
+  default = ""
+}
+variable "secret_key" {
+  type = string
+  default = ""
 }
 provider "alicloud" {
-  shared_config_files = ["/Users/tf_user/.aliyun/conf"]
-  profile = "customprofile"
+  region = var.region
 }
 
 variable "instance_name" {
