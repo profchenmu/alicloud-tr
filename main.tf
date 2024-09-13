@@ -3,6 +3,7 @@ variable "region" {
 }
 provider "alicloud" {
   shared_config_files = ["/Users/tf_user/.aliyun/conf"]
+  profile = "customprofile"
 }
 
 variable "instance_name" {
