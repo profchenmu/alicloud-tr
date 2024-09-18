@@ -71,7 +71,7 @@ resource "alicloud_security_group_rule" "allow_tcp_5000" {
 }
 
 variable "image_id" {
-  default = "ubuntu_18_04_64_20G_alibase_20190624.vhd"
+  default = "aliyun_3_x64_20G_alibase_20240819.vhd"
 }
 
 variable "internet_bandwidth" {
