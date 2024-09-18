@@ -1,5 +1,5 @@
 variable "region" {
-  default = "cn-qingdao"
+  default = "cn-shanghai"
 }
 
 variable "access_key" {
@@ -23,7 +23,7 @@ variable "instance_name" {
 }
 
 variable "instance_type" {
-  default = "ecs.n1.tiny"
+  default = "ecs.c8y.small"
 }
 
 data "alicloud_zones" "default" {
