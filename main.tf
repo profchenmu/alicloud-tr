@@ -40,6 +40,7 @@ resource "alicloud_vpc" "vpc" {
 resource "alicloud_vswitch" "vsw" {
   vpc_id     = alicloud_vpc.vpc.id
   cidr_block = "172.16.0.0/21"
+  zone_id    = data.alicloud_zones.default.zones.0.id
 }
 
 resource "alicloud_security_group" "default" {
@@ -82,6 +83,7 @@ variable "password" {
 }
 
 resource "alicloud_instance" "instance" {
+  availability_zone          = data.alicloud_zones.default.zones.0.id
   security_groups            = alicloud_security_group.default.*.id
   password                   = var.password
   instance_type              = var.instance_type
