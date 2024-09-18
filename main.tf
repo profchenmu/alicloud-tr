@@ -87,7 +87,7 @@ resource "alicloud_instance" "instance" {
   security_groups            = alicloud_security_group.default.*.id
   password                   = var.password
   instance_type              = var.instance_type
-  system_disk_category       = "cloud_efficiency"
+  system_disk_category       = "cloud_auto"
   image_id                   = var.image_id
   instance_name              = var.instance_name
   vswitch_id                 = alicloud_vswitch.vsw.id
