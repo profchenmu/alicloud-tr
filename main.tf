@@ -1,5 +1,5 @@
 variable "region" {
-  default = "cn-qingdao-b"
+  default = "cn-qingdao"
 }
 
 variable "access_key" {
